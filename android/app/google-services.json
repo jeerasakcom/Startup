@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "835747805274",
+    "project_id": "tdvpnext-e427a",
+    "storage_bucket": "tdvpnext-e427a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835747805274:android:213ec7e8258d7c52abc063",
+        "android_client_info": {
+          "package_name": "com.example.tdvpnext"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "835747805274-vpfrspfmiajmaienhuct2am0qnnf68t7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tdvpnext",
+            "certificate_hash": "da48dc5f324bf81c613b7771cc4b4384a5e6bbad"
+          }
+        },
+        {
+          "client_id": "835747805274-k3p3aki83fv8it74jiasds8o87ds9kps.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARAi5fTIX4XjqlD_VGL06GdY3gyj0onpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "835747805274-k3p3aki83fv8it74jiasds8o87ds9kps.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
