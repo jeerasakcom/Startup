@@ -7,6 +7,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tdvpnext/components/frontend/guest/home/homepage.dart';
 import 'package:tdvpnext/utils/style.dart';
 
+
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -55,7 +57,7 @@ class _SplashPageState extends State<SplashPage> {
 
   void navigationPage() {
     Navigator.of(context).push(MaterialPageRoute(
-      builder: (context) => HomePage(),
+      builder: (context) => const HomePage(),
     ));
   }
 

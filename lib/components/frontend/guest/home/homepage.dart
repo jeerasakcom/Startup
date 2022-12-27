@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tdvpnext/components/frontend/guest/calendar/calendarpage.dart';
+import 'package:tdvpnext/components/frontend/guest/chatbot/chatbot.dart';
 import 'package:tdvpnext/components/frontend/guest/communication/communication.dart';
 import 'package:tdvpnext/components/frontend/guest/corporation/corporation.dart';
 import 'package:tdvpnext/utils/style.dart';
@@ -98,7 +99,7 @@ class _HomePageState extends State<HomePage> {
     const HomePage(),
     const CommunicationPages(),
     const HomePage(),
-    const HomePage(),
+    const ChatbotPage(),
   ];
 
   @override
