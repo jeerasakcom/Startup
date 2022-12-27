@@ -1,0 +1,193 @@
+import 'package:flutter/material.dart';
+
+class StyleProjects {
+  // base color
+  Color darkColor = const Color(0xff0659b4);
+  Color primaryColor = const Color(0xff1461e7);
+  Color baseColor = const Color(0xff104db8); //e7effc);
+  Color backgroundState = const Color.fromARGB(255, 0, 52, 163);
+  Color lightColor = const Color.fromARGB(255, 80, 156, 255);
+  Color mainbutton = const Color.fromARGB(255, 130, 201, 255);
+  Color alertDialog = const Color.fromARGB(255, 255, 222, 222);
+
+  // img
+  static String logo = 'assets/images/logo.png';
+
+  static String avatar = 'assets/images/avatar.png';
+
+  // Topic
+  TextStyle topicstyle1 = const TextStyle(
+      fontFamily: 'THSarabunNew',
+      color: Color(0xff002080),
+      fontWeight: FontWeight.bold,
+      fontSize: 32);
+
+  TextStyle topicstyle2 = const TextStyle(
+      fontFamily: 'THSarabunNew',
+      color: Color(0xff002080),
+      fontWeight: FontWeight.bold,
+      fontSize: 24);
+
+  TextStyle topicstyle3 = const TextStyle(
+      fontFamily: 'THSarabunNew',
+      color: Color(0xfffefbfb),
+      fontWeight: FontWeight.bold,
+      fontSize: 24);
+
+  TextStyle topicstyle4 = const TextStyle(
+      fontFamily: 'THSarabunNew',
+      color: Color(0xff000000),
+      fontWeight: FontWeight.bold,
+      fontSize: 24);
+
+  TextStyle topicstyle5 = const TextStyle(
+      fontFamily: 'Charmonman',
+      color: Color(0xff04066b),
+      fontWeight: FontWeight.bold,
+      fontSize: 20);
+
+  TextStyle topicstyle6 = const TextStyle(
+      fontFamily: 'THSarabunNew',
+      color: Color(0xff002080),
+      fontWeight: FontWeight.bold,
+      fontSize: 18);
+
+  TextStyle topicstyle7 = const TextStyle(
+    fontFamily: 'THSarabunNew',
+    fontSize: 24,
+    fontWeight: FontWeight.bold,
+    color: Color(0xffffda7a),
+  );
+
+  // Content
+  TextStyle contentstyle1 = const TextStyle(
+      fontFamily: 'THSarabunNew',
+      color: Color(0xfffefbfb),
+      fontWeight: FontWeight.bold,
+      fontSize: 18);
+
+  TextStyle contentstyle2 = const TextStyle(
+      fontFamily: 'THSarabunNew',
+      color: Color(0xfffefbfb),
+      fontWeight: FontWeight.bold,
+      fontSize: 10);
+
+  TextStyle contentstyle3 = const TextStyle(
+      fontFamily: 'Charmonman',
+      color: Color(0xff002080),
+      fontWeight: FontWeight.bold,
+      fontSize: 18);
+
+  TextStyle contentstyle4 = const TextStyle(
+    fontFamily: 'THSarabunNew',
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+    color: Color(0xFF14005C),
+  );
+
+  TextStyle contentstyle5 = const TextStyle(
+    fontFamily: 'THSarabunNew',
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+    color: Color(0xFF140010),
+  );
+
+  TextStyle contentstyle6 = const TextStyle(
+    fontFamily: 'THSarabunNew',
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+    color: Color(0xffffda7a),
+  );
+
+  // Box
+  SizedBox boxTop1 = const SizedBox(
+    height: 50,
+  );
+
+  SizedBox boxTop2 = const SizedBox(
+    height: 30,
+  );
+
+  SizedBox boxheight1 = const SizedBox(
+    height: 10,
+  );
+
+  SizedBox boxwidth1 = const SizedBox(
+    width: 10,
+  );
+
+  // banner
+  Container header1() {
+    return Container(
+      height: 50,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          const Image(
+            image: AssetImage('assets/images/logo.png'),
+          ),
+          StyleProjects().boxwidth1,
+          const Center(
+            child: Text(
+              'โรงพิมพ์อาสารักษาดินแดน กรมการปกครอง\n'
+              'Territorial Defence Volunteers Printing',
+              style: TextStyle(
+                fontFamily: 'THSarabunNew',
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Color(0xffffda7a),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Container header2() {
+    return Container(
+      height: 50,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          const Image(
+            image: AssetImage('assets/images/logo.png'),
+          ),
+          StyleProjects().boxwidth1,
+          Center(
+            child: Text(
+              'โรงพิมพ์อาสารักษาดินแดน กรมการปกครอง\n'
+              'Territorial Defence Volunteers Printing',
+              style: StyleProjects().contentstyle4,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // alert
+  TextStyle alertstyle1 = const TextStyle(
+    fontFamily: 'THSarabunNew',
+    fontSize: 28,
+    fontWeight: FontWeight.bold,
+    color: Color(0xFFE20057),
+  );
+
+  TextStyle alertstyle2 = const TextStyle(
+    fontFamily: 'THSarabunNew',
+    fontSize: 22,
+    fontWeight: FontWeight.bold,
+    color: Color(0xff000f3b),
+  );
+
+  TextStyle alertstyle3 = const TextStyle(
+    fontFamily: 'THSarabunNew',
+    fontSize: 22,
+    fontWeight: FontWeight.bold,
+    color: Color(0xFFFC0022),
+  );
+
+  StyleProjects();
+  //
+}
