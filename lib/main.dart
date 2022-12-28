@@ -9,6 +9,7 @@ import 'package:tdvpnext/utils/style.dart';
 
 
 
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
@@ -66,13 +67,24 @@ class _SplashPageState extends State<SplashPage> {
     return Scaffold(
       body: Container(
         constraints: BoxConstraints.expand(),
+        // ignore: prefer_const_constructors
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            colors: <Color>[
+              Color(0xff044697),
+              Color(0xff033168),
+            ],
+            begin: FractionalOffset.topCenter,
+            end: FractionalOffset.bottomCenter,
+          ),
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Image.asset(
               'assets/images/logo.png',
-              width: 150,
-              height: 150,
+              width: 250,
+              height: 250,
             ),
             /*
             Text(
