@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:tdvpnext/components/frontend/guest/home/homepage.dart';
-import 'package:tdvpnext/utils/style.dart';
 
 
 
@@ -86,14 +85,6 @@ class _SplashPageState extends State<SplashPage> {
               width: 250,
               height: 250,
             ),
-            /*
-            Text(
-              'โรงพิมพ์อาสารักษาดินแดน กรมการปกครอง\n'
-              'Territorial Defence Volunteers Printing',
-              textAlign: TextAlign.center,
-              style: StyleProjects().topicstyle5,
-            ),
-            */
           ],
         ),
       ),

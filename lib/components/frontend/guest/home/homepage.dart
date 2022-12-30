@@ -8,7 +8,7 @@ import 'package:tdvpnext/components/frontend/guest/calendar/calendarpage.dart';
 import 'package:tdvpnext/components/frontend/guest/chatbot/chatbot.dart';
 import 'package:tdvpnext/components/frontend/guest/communication/communication.dart';
 import 'package:tdvpnext/components/frontend/guest/corporation/corporation.dart';
-import 'package:tdvpnext/utils/style.dart';
+import 'package:tdvpnext/utility/style.dart';
 
 
 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tdvpnext/utility/config_image.dart';
 import 'package:tdvpnext/utility/config_title.dart';
-import 'package:tdvpnext/utils/style.dart';
+import 'package:tdvpnext/utility/style.dart';
 
 class CorporationPages extends StatefulWidget {
   const CorporationPages({super.key});

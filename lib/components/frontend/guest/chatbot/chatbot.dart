@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tdvpnext/utils/style.dart';
+import 'package:tdvpnext/utility/style.dart';
 
 
 
