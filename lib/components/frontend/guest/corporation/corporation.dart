@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tdvpnext/utility/config_image.dart';
+import 'package:tdvpnext/utility/config_title.dart';
 import 'package:tdvpnext/utils/style.dart';
-
-
-
-
-
 
 class CorporationPages extends StatefulWidget {
   const CorporationPages({super.key});
@@ -18,7 +15,7 @@ class CorporationPagesState extends State<CorporationPages>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 215, 238, 255),
+      //backgroundColor: Color.fromARGB(255, 215, 238, 255),
       body: DefaultTabController(
         length: 3,
         child: NestedScrollView(
@@ -69,6 +66,7 @@ class CorporationPagesState extends State<CorporationPages>
               //controller: _tabController,
               children: [
                 //1new
+                /*
                 Container(
                   child: Stack(
                     children: [
@@ -372,6 +370,514 @@ class CorporationPagesState extends State<CorporationPages>
                     ],
                   ),
                 ),
+                */
+                //new ceo
+                Container(
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        top: 20,
+                        bottom: 20,
+                        left: 20,
+                        right: 20,
+                        child: ListView(
+                          children: [
+/*
+                  StyleProjects().header2(),
+                  StyleProjects().boxheight1,
+                  */
+                            /*
+                    
+                  Text(
+                    'คณะกรรมการบริหาร\n'
+                    'โรงพิมพ์อาสารักษาดินแดน กรมการปกครอง',
+                    textAlign: TextAlign.center,
+                    style: StyleProjects().topicstyle4,
+                  ),
+                  */
+
+                            const SizedBox(
+                              height: 100,
+                              child: ConfigImage(),
+                            ),
+
+                            const Center(
+                              child: ConfigTitle(title: "คณะผู้บริหารระดับสูง"),
+                            ),
+                            const Center(
+                              child: ConfigTitle(
+                                  title:
+                                      "โรงพิมพ์อาสารักษาดินแดน กรมการปกครอง"),
+                            ),
+
+                            StyleProjects().boxheight1,
+
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              // ignore: prefer_const_literals_to_create_immutables
+                              children: [
+                                const Image(
+                                  image: AssetImage('assets/images/logo.png'),
+                                  height: 50,
+                                ),
+                                const ConfigTitle(
+                                    title: "ผู้บริหารระดับสูงโรงพิมพ์ฯ"),
+                              ],
+                            ),
+                            //1
+                            Container(
+                              margin: const EdgeInsets.symmetric(
+                                  vertical: 10, horizontal: 10),
+                              decoration: BoxDecoration(
+                                //color: const Color(0xfff4f8fb),
+                                //color: const Color(0xffd6f0ff),
+                                color: const Color.fromARGB(255, 255, 234, 174),
+                                borderRadius: BorderRadius.circular(15.0),
+                              ),
+                              padding: const EdgeInsets.all(10),
+                              child: Row(
+                                children: <Widget>[
+                                  Material(
+                                    child: Container(
+                                      decoration: const BoxDecoration(
+                                        //color: const Color(0xfff4f8fb),
+                                        //color: Color(0xffd6f0ff),
+                                        color:
+                                            Color.fromARGB(255, 255, 234, 174),
+                                      ),
+                                      child: const CircleAvatar(
+                                        radius: 35,
+                                        /*
+                              backgroundImage: NetworkImage(
+                                  "https://tdvpprint.com/assets/frontend/images/boss/1.jpg"),
+*/
+                                        backgroundImage: AssetImage(
+                                          "assets/images/board/1.jpg",
+                                        ),
+                                        backgroundColor: Colors.transparent,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text(
+                                        "นายแมนรัตน์ รัตนสุคนธ์",
+                                        //style: StyleProjects().topicstyle4,
+                                        style: StyleProjects().contentstyle5,
+                                      ),
+                                      Text(
+                                        "อธิบดีกรมการปกครอง",
+                                        style: StyleProjects().contentstyle5,
+                                      ),
+                                      Text(
+                                        "ประธานคณะกรรมการดำเนินงาน",
+                                        style: StyleProjects().contentstyle5,
+                                      ),
+                                      Text(
+                                        "โรงพิมพ์อาสารักษาดินแดน กรมการปกครอง",
+                                        style: StyleProjects().contentstyle5,
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+
+                            //2
+                            Container(
+                              margin: const EdgeInsets.symmetric(
+                                  vertical: 10, horizontal: 10),
+                              decoration: BoxDecoration(
+                                //color: const Color(0xfff4f8fb),
+                                //color: const Color(0xffd6f0ff),
+                                color: const Color.fromARGB(255, 255, 234, 174),
+                                borderRadius: BorderRadius.circular(15.0),
+                              ),
+                              padding: const EdgeInsets.all(10),
+                              child: Row(
+                                children: <Widget>[
+                                  Material(
+                                    child: Container(
+                                      decoration: const BoxDecoration(
+                                        //color: const Color(0xfff4f8fb),
+                                        //color: Color(0xffd6f0ff),
+                                        color:
+                                            Color.fromARGB(255, 255, 234, 174),
+                                      ),
+                                      child: const CircleAvatar(
+                                        radius: 35,
+                                        /*
+                              backgroundImage: NetworkImage(
+                                  "https://tdvpprint.com/assets/frontend/images/boss/2.jpg"),
+                              */
+
+                                        backgroundImage: AssetImage(
+                                          "assets/images/board/2.jpg",
+                                        ),
+                                        backgroundColor: Colors.transparent,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text(
+                                        "นายสันติ ชูศรี",
+                                        style: StyleProjects().contentstyle5,
+                                      ),
+                                      Text(
+                                        "เลขานุการคณะกรรมการฯ รพ.อส.",
+                                        style: StyleProjects().contentstyle5,
+                                      ),
+                                      Text(
+                                        "ผู้อำนวยการ",
+                                        style: StyleProjects().contentstyle5,
+                                      ),
+                                      Text(
+                                        "โรงพิมพ์อาสารักษาดินแดน กรมการปกครอง",
+                                        style: StyleProjects().contentstyle5,
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+
+                            //
+                            // StyleProjects().boxTop2,
+                            // const ConfigTitle(title: "ผู้ช่วยผู้อำนวยการโรงพิมพ์ฯ"),
+
+                            StyleProjects().boxheight1,
+
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              // ignore: prefer_const_literals_to_create_immutables
+                              children: [
+                                const Image(
+                                  image: AssetImage('assets/images/logo.png'),
+                                  height: 50,
+                                ),
+                                const ConfigTitle(
+                                    title: "ผู้ช่วยผู้อำนวยการโรงพิมพ์ฯ"),
+                              ],
+                            ),
+
+                            //3
+                            Container(
+                              margin: const EdgeInsets.symmetric(
+                                  vertical: 10, horizontal: 10),
+                              decoration: BoxDecoration(
+                                //color: const Color(0xfff4f8fb),
+                                //color: const Color(0xffd6f0ff),
+                                color: const Color(0xffcfe4c3),
+
+                                //color: const Color.fromARGB(255, 255, 234, 174),
+                                //color: Color.fromARGB(255, 111, 176, 255),
+                                borderRadius: BorderRadius.circular(15.0),
+                              ),
+                              padding: const EdgeInsets.all(10),
+                              child: Row(
+                                children: <Widget>[
+                                  Material(
+                                    child: Container(
+                                      decoration: const BoxDecoration(
+                                        //color: const Color(0xfff4f8fb),
+                                        //color: Color(0xffd6f0ff),
+                                        color: Color(0xffcfe4c3),
+                                        //color: Color.fromARGB(255, 255, 234, 174),
+                                        //color: Color.fromARGB(255, 111, 176, 255),
+                                      ),
+                                      child: const CircleAvatar(
+                                        radius: 35,
+                                        /* backgroundImage: NetworkImage(
+                                  "https://tdvpprint.com/assets/frontend/images/boss/3-1.jpg"), */
+
+                                        backgroundImage: AssetImage(
+                                          "assets/images/board/3-1.jpg",
+                                        ),
+                                        backgroundColor: Colors.transparent,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text(
+                                        "เรือโท ภัทรชัย ขันธหิรัญ",
+                                        style: StyleProjects().contentstyle5,
+                                      ),
+                                      Text(
+                                        "ผู้ช่วยผู้อำนวยการ (ฝ่ายการค้า)",
+                                        style: StyleProjects().contentstyle5,
+                                      ),
+                                      Text(
+                                        "โรงพิมพ์อาสารักษาดินแดน กรมการปกครอง",
+                                        style: StyleProjects().contentstyle5,
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+
+                            //4
+                            Container(
+                              margin: const EdgeInsets.symmetric(
+                                  vertical: 10, horizontal: 10),
+                              decoration: BoxDecoration(
+                                //color: const Color(0xfff4f8fb),
+                                color: const Color(0xffd6f0ff),
+                                // color: const Color.fromARGB(255, 255, 234, 174),
+                                borderRadius: BorderRadius.circular(15.0),
+                              ),
+                              padding: const EdgeInsets.all(10),
+                              child: Row(
+                                children: <Widget>[
+                                  Material(
+                                    child: Container(
+                                      decoration: const BoxDecoration(
+                                        //color: const Color(0xfff4f8fb),
+                                        color: Color(0xffd6f0ff),
+                                        //color: Color.fromARGB(255, 255, 234, 174),
+                                      ),
+                                      child: const CircleAvatar(
+                                        radius: 35,
+                                        /* backgroundImage: NetworkImage(
+                                  "https://tdvpprint.com/assets/frontend/images/boss/3-2.jpg"),
+                               */
+
+                                        backgroundImage: AssetImage(
+                                          "assets/images/board/3-2.jpg",
+                                        ),
+                                        backgroundColor: Colors.transparent,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text(
+                                        "นายเพิ่มศักดิ์ ศรีสวัสดิ์",
+                                        style: StyleProjects().contentstyle5,
+                                      ),
+                                      Text(
+                                        "ผู้ช่วยผู้อำนวยการ (ฝ่ายการพิมพ์)",
+                                        style: StyleProjects().contentstyle5,
+                                      ),
+                                      Text(
+                                        "โรงพิมพ์อาสารักษาดินแดน กรมการปกครอง",
+                                        style: StyleProjects().contentstyle5,
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+
+                            //5
+                            Container(
+                              margin: const EdgeInsets.symmetric(
+                                  vertical: 10, horizontal: 10),
+                              decoration: BoxDecoration(
+                                //color: const Color(0xfff4f8fb),
+                                //color: const Color(0xffd6f0ff),
+                                // color: const Color.fromARGB(255, 255, 234, 174),
+                                color: const Color(0xffe4c7c0),
+                                borderRadius: BorderRadius.circular(15.0),
+                              ),
+                              padding: const EdgeInsets.all(10),
+                              child: Row(
+                                children: <Widget>[
+                                  Material(
+                                    child: Container(
+                                      decoration: const BoxDecoration(
+                                        //color: const Color(0xfff4f8fb),
+                                        //color: Color(0xffd6f0ff),
+                                        //color: Color.fromARGB(255, 255, 234, 174),
+                                        color: Color(0xffe4c7c0),
+                                      ),
+                                      child: const CircleAvatar(
+                                        radius: 35,
+                                        /*  backgroundImage: NetworkImage(
+                                  "https://tdvpprint.com/assets/frontend/images/boss/3-3.jpg"), */
+
+                                        backgroundImage: AssetImage(
+                                          "assets/images/board/3-3.jpg",
+                                        ),
+                                        backgroundColor: Colors.transparent,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text(
+                                        "นายนัฐนันท์ ศรีจันทร์",
+                                        style: StyleProjects().contentstyle5,
+                                      ),
+                                      Text(
+                                        "ผู้ช่วยผู้อำนวยการ (ฝ่ายบริหาร)",
+                                        style: StyleProjects().contentstyle5,
+                                      ),
+                                      Text(
+                                        "โรงพิมพ์อาสารักษาดินแดน กรมการปกครอง",
+                                        style: StyleProjects().contentstyle5,
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+
+                            //6
+                            Container(
+                              margin: const EdgeInsets.symmetric(
+                                  vertical: 10, horizontal: 10),
+                              decoration: BoxDecoration(
+                                //color: const Color(0xfff4f8fb),
+                                //color: const Color(0xffd6f0ff),
+                                //color: const Color.fromARGB(255, 255, 234, 174),
+                                color: const Color(0xffecd2da),
+                                borderRadius: BorderRadius.circular(15.0),
+                              ),
+                              padding: const EdgeInsets.all(10),
+                              child: Row(
+                                children: <Widget>[
+                                  Material(
+                                    child: Container(
+                                      decoration: const BoxDecoration(
+                                        //color: const Color(0xfff4f8fb),
+                                        //color: Color(0xffd6f0ff),
+                                        //color: Color.fromARGB(255, 255, 234, 174),
+                                        color: Color(0xffecd2da),
+                                      ),
+                                      child: const CircleAvatar(
+                                        radius: 35,
+                                        /* backgroundImage: NetworkImage(
+                                  "https://tdvpprint.com/assets/frontend/images/boss/3-4.jpg"), */
+
+                                        backgroundImage: AssetImage(
+                                          "assets/images/board/3-4.jpg",
+                                        ),
+                                        backgroundColor: Colors.transparent,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text(
+                                        "นายเอกภณ แจ่มใส",
+                                        style: StyleProjects().contentstyle5,
+                                      ),
+                                      Text(
+                                        "ผู้ช่วยผู้อำนวยการ (ฝ่ายการเงินและบัญชี)",
+                                        style: StyleProjects().contentstyle5,
+                                      ),
+                                      Text(
+                                        "โรงพิมพ์อาสารักษาดินแดน กรมการปกครอง",
+                                        style: StyleProjects().contentstyle5,
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+
+                            //7
+                            Container(
+                              margin: const EdgeInsets.symmetric(
+                                  vertical: 10, horizontal: 10),
+                              decoration: BoxDecoration(
+                                //color: const Color(0xfff4f8fb),
+                                //color: const Color(0xffd6f0ff),
+                                color: const Color.fromARGB(255, 255, 234, 174),
+                                borderRadius: BorderRadius.circular(15.0),
+                              ),
+                              padding: const EdgeInsets.all(10),
+                              child: Row(
+                                children: <Widget>[
+                                  Material(
+                                    child: Container(
+                                      decoration: const BoxDecoration(
+                                        //color: const Color(0xfff4f8fb),
+                                        //color: Color(0xffd6f0ff),
+                                        color:
+                                            Color.fromARGB(255, 255, 234, 174),
+                                      ),
+                                      child: const CircleAvatar(
+                                        radius: 35,
+                                        /* backgroundImage: NetworkImage(
+                                  "https://tdvpprint.com/assets/frontend/images/boss/4.jpg"), */
+
+                                        backgroundImage: AssetImage(
+                                          "assets/images/board/4.jpg",
+                                        ),
+                                        backgroundColor: Colors.transparent,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text(
+                                        "นายบูชา จันทรพิมล",
+                                        style: StyleProjects().contentstyle5,
+                                      ),
+                                      Text(
+                                        "ผู้ช่วยเลขานุการ",
+                                        style: StyleProjects().contentstyle5,
+                                      ),
+                                      Text(
+                                        "คณะกรรมการดำเนินงาน",
+                                        style: StyleProjects().contentstyle5,
+                                      ),
+                                      Text(
+                                        "โรงพิมพ์อาสารักษาดินแดน กรมการปกครอง",
+                                        style: StyleProjects().contentstyle5,
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+
+                            //
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
 
                 //2new
                 Stack(
@@ -384,10 +890,24 @@ class CorporationPagesState extends State<CorporationPages>
                     ListView(
                       padding: const EdgeInsets.all(20),
                       children: <Widget>[
+                        StyleProjects().boxTop2,
+
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          // ignore: prefer_const_literals_to_create_immutables
+                          children: [
+                            const Image(
+                              image: AssetImage('assets/images/logo.png'),
+                              height: 50,
+                            ),
+                            const ConfigTitle(title: "พันธกิจและวิสัยทัศน์"),
+                          ],
+                        ),
+
                         Container(
                           padding: const EdgeInsets.all(10),
                           child: Card(
-                            color: const Color(0xfffffdfd),
+                            color: const Color(0xff9dc98a),
                             clipBehavior: Clip.antiAlias,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
@@ -448,7 +968,7 @@ class CorporationPagesState extends State<CorporationPages>
                         Container(
                           padding: const EdgeInsets.all(10),
                           child: Card(
-                            color: const Color(0xfffffdfd),
+                            color: const Color(0xff9dc98a),
                             clipBehavior: Clip.antiAlias,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10),
@@ -528,6 +1048,8 @@ class CorporationPagesState extends State<CorporationPages>
                             ),
                           ),
                         ),
+
+                        
                       ],
                     ),
                   ],
@@ -609,7 +1131,7 @@ class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
     return Container(
-      color: Color.fromARGB(255, 215, 238, 255),
+      color: const Color.fromARGB(255, 215, 238, 255),
       child: _tabBar,
     );
   }

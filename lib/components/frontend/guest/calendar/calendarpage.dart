@@ -5,10 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:tdvpnext/utils/style.dart';
 
-
-
-
-
 class CalendarPage extends StatefulWidget {
   const CalendarPage({Key? key}) : super(key: key);
 
@@ -143,6 +139,59 @@ class _CalendarPageState extends State<CalendarPage>
 
       DateTime.parse("2022-12-30"): ['วันหยุดราชการ กรณีพิเศษประจำปี 2565'],
       DateTime.parse("2022-12-31"): ['วันสิ้นปี'],
+
+      //2566-2023
+      DateTime.parse("2023-01-01"): ['วันขึ้นปีใหม่'],
+      DateTime.parse("2023-01-02"): ['วันหยุดชดเชยวันขึ้นปีใหม่'],
+
+      DateTime.parse("2023-02-10"): ['วันสถาปนากองอาสารักษาดินแดน'],
+
+      DateTime.parse("2023-03-06"): ['วันมาฆบูชา'],
+
+      DateTime.parse("2023-04-01"): ['วันสถาปนากระทรวงมหาดไทย'],
+      DateTime.parse("2023-04-06"): [
+        'วันพระบาทสมเด็จพระพุทธยอดฟ้าจุฬาโลกมหาราชและวันที่ระลึกมหาจักรีบรมราชวงศ์'
+      ],
+      DateTime.parse("2023-04-12"): ['วันสงกรานต์'],
+      DateTime.parse("2023-04-13"): ['วันสงกรานต์'],
+      DateTime.parse("2023-04-14"): ['วันสงกรานต์'],
+      DateTime.parse("2023-04-15"): ['วันสงกรานต์'],
+      DateTime.parse("2023-05-01"): ['วันแรงงานแห่งชาติ'],
+
+      DateTime.parse("2023-05-04"): ['วันฉัตรมงคล'],
+      DateTime.parse("2023-06-03"): [
+        'วันเฉลิมพระชนมพรรษาสมเด็จพระนางเจ้าสุทิดาพัชรสุธาพิมลลักษณ พระบรมราชินี'
+      ],
+      DateTime.parse("2023-06-05"): ['วันวิสาขบูชา'],
+
+      DateTime.parse("2023-07-28"): [
+        'วันเฉลิมพระชนมพรรษาพระบาทสมเด็จพระเจ้าอยู่หัว'
+      ],
+
+      DateTime.parse("2023-08-01"): ['วันอาสาฬหบูชา'],
+      DateTime.parse("2023-08-02"): ['วันเข้าพรรษา'],
+      DateTime.parse("2023-08-12"): [
+        'วันเฉลิมพระชนมพรรษาสมเด็จพระนางเจ้าสิริกิติ์ พระบรมราชินีนาถพระบรมราชชนนีพันปีหลวง'
+      ],
+      DateTime.parse("2023-08-14"): [
+        'วันหยุดชดเชยวันเฉลิมพระชนมพรรษาสมเด็จพระนางเจ้าสิริกิติ์ พระบรมราชินีนาถพระบรมราชชนนีพันปีหลวง'
+      ],
+
+      DateTime.parse("2023-09-28"): [
+        'วันสถาปนาโรงพิมพ์อาสารักษาดินแดน กรมการปกครอง กระทรวงมหาดไทย'
+      ],
+
+      DateTime.parse("2023-10-13"): [
+        'วันคล้ายวันสวรรคตพระบาทสมเด็จพระบรมชนกาธิเบศร มหาภูมิพลอดุลยเดชมหาราช บรมนาถบพิตร'
+      ],
+      DateTime.parse("2023-10-23"): ['วันปิยมหาราช'],
+
+      DateTime.parse("2023-12-05"): [
+        'วันคล้ายวันพระบรมราชสมภพของพระบาทสมเด็จพระบรมชนกาธิเบศร มหาภูมิพลอดุลยเดชมหาราช บรมนาถบพิตร'
+      ],
+      DateTime.parse("2023-12-10"): ['วันรัฐธรรมนูญ'],
+      DateTime.parse("2023-12-11"): ['วันหยุดชดเชยวันรัฐธรรมนูญ'],
+      DateTime.parse("2023-12-31"): ['วันสิ้นปี'],
     };
 
     _selectedEvents = _events![selectedDay] ?? [];
@@ -198,7 +247,7 @@ class _CalendarPageState extends State<CalendarPage>
             _backButton(),
             StyleProjects().boxheight1,
             Card(
-              margin: EdgeInsets.all(20),
+              margin: const EdgeInsets.all(25),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10)),
               elevation: 5,
@@ -249,11 +298,16 @@ class _CalendarPageState extends State<CalendarPage>
                       ),
                     ),
                     _buildTableCalendar(),
+                    //StyleProjects().boxheight1,
+                    StyleProjects().boxTop2,
                   ],
                 ),
               ),
             ),
-            Expanded(child: _buildEventList()),
+            Expanded(
+              flex: 1,
+              child: _buildEventList(),
+            ),
           ],
         ),
       ),
@@ -298,9 +352,13 @@ class _CalendarPageState extends State<CalendarPage>
                 decoration: BoxDecoration(
                   // ignore: prefer_const_constructors
                   gradient: LinearGradient(
-                      begin: Alignment.topCenter, end: Alignment.bottomCenter,
-                      // ignore: prefer_const_literals_to_create_immutables
-                      colors: <Color>[Color(0xfffad961), Color(0xfff7681c)]),
+                    begin: Alignment.topCenter, end: Alignment.bottomCenter,
+                    // ignore: prefer_const_literals_to_create_immutables
+                    colors: <Color>[
+                      const Color(0xfffad961),
+                      const Color(0xfff7681c),
+                    ],
+                  ),
 
                   border: Border.all(width: 1),
                   borderRadius: BorderRadius.circular(10),
@@ -309,13 +367,15 @@ class _CalendarPageState extends State<CalendarPage>
                     const BoxShadow(
                       color: Color(0xfff8fcff),
                       offset: Offset(1.0, 5.0),
-                      blurRadius: 5,
+                      blurRadius: 2,
                     ),
                   ],
                   //color: const Color(0xff81c2eb),
                   color: const Color(0xfff8fcff),
                 ),
-                margin: const EdgeInsets.all(20),
+                //margin: const EdgeInsets.all(20),
+                margin:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 child: ListTile(
                   title: Text(
                     'วันหยุดราชการและวันหยุดพิเศษ',
@@ -470,4 +530,57 @@ final Map<DateTime, List> _holidays = {
   DateTime(2022, 12, 12): ['วันหยุดชดเชยวันรัฐธรรมนูญ'],
   DateTime(2022, 12, 30): ['วันหยุดราชการ กรณีพิเศษประจำปี 2565'],
   DateTime(2022, 12, 31): ['วันสิ้นปี'],
+
+  //2566 - 2023
+  DateTime(2023, 01, 01): ['วันขึ้นปีใหม่'],
+  DateTime(2023, 01, 02): ['วันหยุดชดเชยวันขึ้นปีใหม่'],
+
+  DateTime(2023, 02, 10): ['วันสถาปนากองอาสารักษาดินแดน'],
+
+  DateTime(2023, 03, 06): ['วันมาฆบูชา'],
+
+  DateTime(2023, 04, 01): ['วันสถาปนากระทรวงมหาดไทย'],
+  DateTime(2023, 04, 06): [
+    'วันพระบาทสมเด็จพระพุทธยอดฟ้าจุฬาโลกมหาราชและวันที่ระลึกมหาจักรีบรมราชวงศ์'
+  ],
+
+  DateTime(2023, 04, 12): ['วันสงกรานต์'],
+  DateTime(2023, 04, 13): ['วันสงกรานต์'],
+  DateTime(2023, 04, 14): ['วันสงกรานต์'],
+  DateTime(2023, 04, 15): ['วันสงกรานต์'],
+
+  DateTime(2023, 05, 01): ['วันแรงงานแห่งชาติ'],
+  DateTime(2023, 05, 04): ['วันฉัตรมงคล'],
+
+  DateTime(2023, 06, 05): ['วันวิสาขบูชา'],
+  DateTime(2023, 06, 03): [
+    'วันเฉลิมพระชนมพรรษาสมเด็จพระนางเจ้าสุทิดาพัชรสุธาพิมลลักษณ พระบรมราชินี'
+  ],
+
+  DateTime(2023, 07, 28): ['วันเฉลิมพระชนมพรรษาพระบาทสมเด็จพระเจ้าอยู่หัว'],
+
+  DateTime(2023, 08, 01): ['วันอาสาฬหบูชา'],
+  DateTime(2023, 08, 02): ['วันเข้าพรรษา'],
+  DateTime(2023, 08, 12): [
+    'วันเฉลิมพระชนมพรรษาสมเด็จพระนางเจ้าสิริกิติ์ พระบรมราชินีนาถพระบรมราชชนนีพันปีหลวง'
+  ],
+  DateTime(2023, 08, 14): [
+    'วันหยุดชดเชยวันเฉลิมพระชนมพรรษาสมเด็จพระนางเจ้าสิริกิติ์ พระบรมราชินีนาถพระบรมราชชนนีพันปีหลวง'
+  ],
+
+  DateTime(2023, 09, 28): [
+    'วันสถาปนาโรงพิมพ์อาสารักษาดินแดน กรมการปกครอง กระทรวงมหาดไทย'
+  ],
+
+  DateTime(2023, 10, 13): [
+    'วันคล้ายวันสวรรคตพระบาทสมเด็จพระบรมชนกาธิเบศร มหาภูมิพลอดุลยเดชมหาราช บรมนาถบพิตร'
+  ],
+  DateTime(2023, 10, 23): ['วันปิยมหาราช'],
+
+  DateTime(2023, 12, 05): [
+    'วันคล้ายวันพระบรมราชสมภพของพระบาทสมเด็จพระบรมชนกาธิเบศร มหาภูมิพลอดุลยเดชมหาราช บรมนาถบพิตร'
+  ],
+  DateTime(2023, 12, 10): ['วันรัฐธรรมนูญ'],
+  DateTime(2023, 12, 11): ['วันหยุดชดเชยวันรัฐธรรมนูญ'],
+  DateTime(2023, 12, 31): ['วันสิ้นปี'],
 };

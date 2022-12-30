@@ -327,7 +327,7 @@ class _HomePageState extends State<HomePage> {
             children: <Widget>[
               Container(
                 child: Image.asset(
-                  'assets/images/$nameIcon',
+                  'assets/images/icons/$nameIcon',
                   width: 50,
                   height: 50,
                 ),

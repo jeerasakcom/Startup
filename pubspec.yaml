@@ -48,6 +48,9 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/images/board/
+    - assets/images/icons/
+    
   fonts:
     - family: THSarabunNew
       fonts:
