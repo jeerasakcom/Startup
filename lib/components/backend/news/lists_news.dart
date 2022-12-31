@@ -10,7 +10,6 @@ import 'package:tdvpnext/utility/config_text_button.dart';
 import 'package:tdvpnext/utility/dailog.dart';
 import 'package:tdvpnext/utility/style.dart';
 
-
 class ListsNewsPages extends StatefulWidget {
   const ListsNewsPages({
     Key? key,
@@ -63,6 +62,7 @@ class _ListsNewsPagesState extends State<ListsNewsPages> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+/*
       appBar: AppBar(
         backgroundColor: StyleProjects().primaryColor,
         leading: IconButton(
@@ -72,6 +72,7 @@ class _ListsNewsPagesState extends State<ListsNewsPages> {
           },
         ),
       ),
+      */
       floatingActionButton: FloatingActionButton(
         backgroundColor: const Color.fromARGB(255, 0, 110, 244),
         onPressed: () {
@@ -93,7 +94,7 @@ class _ListsNewsPagesState extends State<ListsNewsPages> {
               : Center(
                   child: ConfigText(
                     lable: 'ไม่มีข่าว',
-                    textStyle: StyleProjects().contentstyle5,
+                    textStyle: StyleProjects().topicstyle4,
                   ),
                 ),
     );
@@ -126,7 +127,9 @@ class _ListsNewsPagesState extends State<ListsNewsPages> {
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10)),
                     elevation: 1,
-                    color: const Color(0xFFBEE3C1),
+                    color: StyleProjects().cardStream2,
+                    //color: const Color(0xffff9c7a),
+                    //color: const Color(0xFFBEE3C1),
                     // Color.fromARGB(255, 136, 223, 161),
                     child: Column(
                       children: [
@@ -285,14 +288,14 @@ class _ListsNewsPagesState extends State<ListsNewsPages> {
           content: SingleChildScrollView(
             child: Column(
               children: [
-                ConfigForm(
+                ConfigForm2(
                     textInputType: TextInputType.text,
                     controller: titleController,
                     label: 'หัวข้อข่าว',
                     iconData: Icons.list_outlined,
                     changeFunc: (String string) {}),
                 StyleProjects().boxheight1,
-                ConfigForm(
+                ConfigForm2(
                     textInputType: TextInputType.text,
                     controller: detailController,
                     label: 'รายละเอียด',

@@ -4,19 +4,12 @@ import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:tdvpnext/components/frontend/guest/authentication/authentication.dart';
 import 'package:tdvpnext/components/frontend/guest/calendar/calendarpage.dart';
 import 'package:tdvpnext/components/frontend/guest/chatbot/chatbot.dart';
 import 'package:tdvpnext/components/frontend/guest/communication/communication.dart';
 import 'package:tdvpnext/components/frontend/guest/corporation/corporation.dart';
 import 'package:tdvpnext/utility/style.dart';
-
-
-
-
-
-
-
-
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -43,23 +36,25 @@ class _HomePageState extends State<HomePage> {
               ),
               actions: [
                 TextButton(
-                    onPressed: () {
-                      if (Platform.isAndroid) {
-                        SystemNavigator.pop();
-                      } else if (Platform.isIOS) {
-                        exit(0);
-                      }
-                    },
-                    child: Text(
-                      'ใช่',
-                      style: StyleProjects().alertstyle2,
-                    )),
+                  onPressed: () {
+                    if (Platform.isAndroid) {
+                      SystemNavigator.pop();
+                    } else if (Platform.isIOS) {
+                      exit(0);
+                    }
+                  },
+                  child: Text(
+                    'ใช่',
+                    style: StyleProjects().alertstyle2,
+                  ),
+                ),
                 TextButton(
-                    onPressed: () => Navigator.of(context).pop(false),
-                    child: Text(
-                      'ไม่',
-                      style: StyleProjects().alertstyle2,
-                    ))
+                  onPressed: () => Navigator.of(context).pop(false),
+                  child: Text(
+                    'ไม่',
+                    style: StyleProjects().alertstyle2,
+                  ),
+                ),
               ],
             ));
   }
@@ -142,7 +137,7 @@ class _HomePageState extends State<HomePage> {
     return WillPopScope(
       onWillPop: _onWillPop,
       child: Scaffold(
-       /*
+        /*
         key: scaffoldKey,
 
         appBar: AppBar(
@@ -246,7 +241,7 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
 */
-        
+
         appBar: AppBar(
           backgroundColor: const Color(0xff81d4fa),
           title: Text(
@@ -264,8 +259,7 @@ class _HomePageState extends State<HomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const HomePage(),
-                    //const RegisterPage(),
+                    builder: (context) => const AuthenticationPage(),
                   ),
                 );
               },

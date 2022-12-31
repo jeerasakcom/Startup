@@ -11,9 +11,13 @@ class StyleProjects {
   Color buttonb = const Color(0xffe6f8ff);
   Color cardcolor = const Color(0xffb3e5fc);
   Color alertblock = const Color.fromARGB(255, 255, 222, 222);
+  Color cardStream1 = const Color(0xffea7d7d);
+  Color cardStream2 = const Color(0xffff9c7a);
+  Color cardStream3 = const Color(0xffff7647);
 
   // Route
   static String routeHome = '/home';
+  static String routAuthen = '/authen';
 
   // img
   static String logo = 'assets/images/logo.png';

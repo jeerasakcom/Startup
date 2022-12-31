@@ -61,7 +61,15 @@ class _CreateNewsPagesState extends State<CreateNewsPages> {
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: StyleProjects().primaryColor,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+      ),
       body: SingleChildScrollView(
         child: Container(
           padding: EdgeInsets.all(20),
@@ -249,8 +257,9 @@ class _CreateNewsPagesState extends State<CreateNewsPages> {
         .collection('news')
         .doc()
         .set(map)
-        // .then((value) => Navigator.pop(context));
+        .then((value) => Navigator.pop(context));
 
+/*
         .then(
           (value) => Navigator.push(
             context,
@@ -259,20 +268,12 @@ class _CreateNewsPagesState extends State<CreateNewsPages> {
             ),
           ),
         );
+        */
   }
 
   Container blockSaveNews() => Container(
         padding: const EdgeInsets.all(10.0),
         child: ElevatedButton(
-          /*
-          style: ElevatedButton.styleFrom(
-            //backgroundColor: const Color.fromARGB(255, 25, 82, 167),
-            backgroundColor: const Color(0xFF459522),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(5),
-            ),
-          ),
-          */
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all(
               const Color(0xFF459522),

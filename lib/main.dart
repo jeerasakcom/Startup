@@ -4,9 +4,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:tdvpnext/components/backend/admin/lists_admin.dart';
+import 'package:tdvpnext/components/backend/admin/create_admin.dart';
 import 'package:tdvpnext/components/frontend/guest/home/homepage.dart';
-
-
 
 
 void main() async {
@@ -34,6 +34,12 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
           scaffoldBackgroundColor: Colors.white),
       home: SplashPage(),
+
+/*
+      home: //AddAdminPage(),
+          const ListsAdminPages(),
+
+*/
     );
   }
 }

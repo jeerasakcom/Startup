@@ -12,7 +12,6 @@ import 'package:tdvpnext/utility/style.dart';
 import 'package:tdvpnext/utility/category_constant.dart';
 import 'package:tdvpnext/utility/style.dart';
 
-
 class CreateProductPages extends StatefulWidget {
   const CreateProductPages({super.key});
 
@@ -34,7 +33,15 @@ class _CreateProductPagesState extends State<CreateProductPages> {
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: StyleProjects().primaryColor,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+      ),
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -543,9 +550,7 @@ class _CreateProductPagesState extends State<CreateProductPages> {
             .collection('products')
             .doc()
             .set(productModel.toMap())
-            .then((value) {
-          Navigator.pop(context);
-        });
+            .then((value) => Navigator.pop(context));
       });
     });
   }
